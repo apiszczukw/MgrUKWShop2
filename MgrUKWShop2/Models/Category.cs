@@ -7,5 +7,7 @@
         public string Name { get; set; }
 
         public string Desc { get; set; }
+
+        public ICollection<Film> Films { get; set; }
     }
 }

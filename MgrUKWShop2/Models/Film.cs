@@ -30,6 +30,7 @@ namespace MgrUKWShop2.Models
 
         // nazwa tabeli dołączanej + nazwa PK
 
+        public Category Category { get; set; }
 
     }
 }
