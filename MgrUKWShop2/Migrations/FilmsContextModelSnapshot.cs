@@ -41,6 +41,44 @@ namespace MgrUKWShop2.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Desc = "Dynamiczne filmy pełne pościgów, efektów specjalnych i adrenaliny.",
+                            Name = "Akcja i Sensacja"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Desc = "Lekkie i zabawne produkcje idealne na dobry humor i relaks.",
+                            Name = "Komedia"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Desc = "Poruszające opowieści skupiające się na emocjach, relacjach i ludzkich wyborach.",
+                            Name = "Dramat"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Desc = "Podróże w przyszłość, kosmos, magia oraz niesamowite światy wyobraźni.",
+                            Name = "Sci-Fi i Fantasy"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Desc = "Trzymające w napięciu zagadki, tajemnice i mroczne intrygi.",
+                            Name = "Thriller i Kryminał"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Desc = "Wyjątkowe bajki i filmy animowane dla widzów w każdym wieku.",
+                            Name = "Animacje"
+                        });
                 });
 
             modelBuilder.Entity("MgrUKWShop2.Models.Film", b =>
@@ -78,6 +116,308 @@ namespace MgrUKWShop2.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Films");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 1,
+                            DateAdded = new DateTime(2008, 7, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Batman stawia czoło swojemu największemu wrogowi – Jokerowi.",
+                            Director = "Christopher Nolan",
+                            Price = 14.99m,
+                            Title = "Mroczny Rycerz"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 1,
+                            DateAdded = new DateTime(2015, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Pościg przez postapokaliptyczne pustkowie w walce o przetrwanie.",
+                            Director = "George Miller",
+                            Price = 19.99m,
+                            Title = "Mad Max: Na drodze gniewu"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 1,
+                            DateAdded = new DateTime(2014, 10, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Były płatny zabójca mści się za śmierć swojego psa.",
+                            Director = "Chad Stahelski",
+                            Price = 12.99m,
+                            Title = "John Wick"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 1,
+                            DateAdded = new DateTime(2000, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Rzymski generał szuka zemsty na skorumpowanym cesarzu.",
+                            Director = "Ridley Scott",
+                            Price = 16.99m,
+                            Title = "Gladiator"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 1,
+                            DateAdded = new DateTime(1988, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Policjant z Nowego Jorku ratuje zakładników w wieżowcu.",
+                            Director = "John McTiernan",
+                            Price = 9.99m,
+                            Title = "Szklana pułapka"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryId = 2,
+                            DateAdded = new DateTime(2009, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Trzej przyjaciele budzą się po wieczorze kawalerskim w Las Vegas bez pan młodego.",
+                            Director = "Todd Phillips",
+                            Price = 11.99m,
+                            Title = "Kac Vegas"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryId = 2,
+                            DateAdded = new DateTime(2011, 11, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Sparaliżowany milioner zatrudnia młodego opiekuna z przedmieścia.",
+                            Director = "Olivier Nakache, Eric Toledano",
+                            Price = 13.99m,
+                            Title = "Nietykalni"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryId = 2,
+                            DateAdded = new DateTime(2000, 2, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Kultowa polska komedia sensacyjna o perypetiach młodego skrzypka.",
+                            Director = "Olaf Lubaszenko",
+                            Price = 9.99m,
+                            Title = "Chłopaki nie płaczą"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CategoryId = 2,
+                            DateAdded = new DateTime(1997, 11, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Zwykły taksówkarz omyłkowo wzięty za płatnego zabójcę.",
+                            Director = "Juliusz Machulski",
+                            Price = 9.99m,
+                            Title = "Kiler"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CategoryId = 2,
+                            DateAdded = new DateTime(2013, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Błyskotliwa kariera i upadek nowojorskiego maklera giełdowego.",
+                            Director = "Martin Scorsese",
+                            Price = 17.99m,
+                            Title = "Wilk z Wall Street"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CategoryId = 3,
+                            DateAdded = new DateTime(1994, 9, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Historia wieloletniej przyjaźni dwóch więźniów w zakładzie karnym.",
+                            Director = "Frank Darabont",
+                            Price = 14.99m,
+                            Title = "Skazani na Shawshank"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CategoryId = 3,
+                            DateAdded = new DateTime(1972, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Saga rodzinna mafijnego klanu Corleone.",
+                            Director = "Francis Ford Coppola",
+                            Price = 15.99m,
+                            Title = "Ojciec chrzestny"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CategoryId = 3,
+                            DateAdded = new DateTime(1999, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Strażnik więzienny odkrywa, że skazaniec posiada niezwykły dar.",
+                            Director = "Frank Darabont",
+                            Price = 13.99m,
+                            Title = "Zielona mila"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CategoryId = 3,
+                            DateAdded = new DateTime(1993, 12, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Niemiecki przemysłowiec ratuje setki Żydów podczas II wojny światowej.",
+                            Director = "Steven Spielberg",
+                            Price = 16.99m,
+                            Title = "Lista Schindlera"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CategoryId = 3,
+                            DateAdded = new DateTime(1997, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Młody geniusz matematyczny próbuje odnaleźć swoją drogę życiową.",
+                            Director = "Gus Van Sant",
+                            Price = 11.99m,
+                            Title = "Buntownik z wyboru"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CategoryId = 4,
+                            DateAdded = new DateTime(1999, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Haker odkrywa, że świat jest symulacją stworzoną przez maszyny.",
+                            Director = "Lana Wachowski, Lilly Wachowski",
+                            Price = 14.99m,
+                            Title = "Matrix"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CategoryId = 4,
+                            DateAdded = new DateTime(2014, 11, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Grupa astronautów wyrusza przez tunel czasoprzestrzenny, by uratować ludzkość.",
+                            Director = "Christopher Nolan",
+                            Price = 18.99m,
+                            Title = "Interstellar"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CategoryId = 4,
+                            DateAdded = new DateTime(2001, 12, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Wyprawa hobbitów mająca na celu zniszczenie Jedynych Pierścieni.",
+                            Director = "Peter Jackson",
+                            Price = 19.99m,
+                            Title = "Władca Pierścieni: Drużyna Pierścienia"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CategoryId = 4,
+                            DateAdded = new DateTime(2017, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Nowy łowca androidów odkrywa sekret, który może pogrążyć społeczeństwo.",
+                            Director = "Denis Villeneuve",
+                            Price = 21.99m,
+                            Title = "Blade Runner 2049"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CategoryId = 4,
+                            DateAdded = new DateTime(2021, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Młody arystokrata trafia na niebezpieczną planetę pełną cennej substancji.",
+                            Director = "Denis Villeneuve",
+                            Price = 24.99m,
+                            Title = "Diuna"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CategoryId = 5,
+                            DateAdded = new DateTime(1995, 9, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Detektywi tropią seryjnego mordercę inspirowanego siedmioma grzechami głównymi.",
+                            Director = "David Fincher",
+                            Price = 12.99m,
+                            Title = "Siedem"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CategoryId = 5,
+                            DateAdded = new DateTime(1991, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Młoda agentka FBI współpracuje z uwięzionym psychopatem, by złapać innego mordercę.",
+                            Director = "Jonathan Demme",
+                            Price = 13.99m,
+                            Title = "Milczenie owiec"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CategoryId = 5,
+                            DateAdded = new DateTime(2010, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Dwaj szeryfowie badają tajemnicze zaginięcie pacjentki szpitala psychiatrycznego.",
+                            Director = "Martin Scorsese",
+                            Price = 14.99m,
+                            Title = "Wyspa tajemnic"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CategoryId = 5,
+                            DateAdded = new DateTime(1999, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Niezadowolony z życia pracownik biurowy zakłada nielegalny klub walki.",
+                            Director = "David Fincher",
+                            Price = 13.99m,
+                            Title = "Podziemny krąg"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CategoryId = 5,
+                            DateAdded = new DateTime(2007, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Detektywi i dziennikarze próbują rozwiązać zagadkę seryjnego mordercy z San Francisco.",
+                            Director = "David Fincher",
+                            Price = 11.99m,
+                            Title = "Zodiak"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CategoryId = 6,
+                            DateAdded = new DateTime(1994, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Młody lew musi przejąć władzę po swoim ojcu.",
+                            Director = "Roger Allers, Rob Minkoff",
+                            Price = 14.99m,
+                            Title = "Król Lew"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CategoryId = 6,
+                            DateAdded = new DateTime(2001, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Ogr wyrusza na ratunek księżniczce, by odzyskać swoje bagot.",
+                            Director = "Andrew Adamson, Vicky Jenson",
+                            Price = 12.99m,
+                            Title = "Shrek"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CategoryId = 6,
+                            DateAdded = new DateTime(2015, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Emocje w głowie dorastającej dziewczynki próbują utrzymać równowagę.",
+                            Director = "Pete Docter",
+                            Price = 16.99m,
+                            Title = "W głowie się nie mieści"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CategoryId = 6,
+                            DateAdded = new DateTime(2018, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Młody Miles Morales odkrywa moce i wieloświat pełen Pająków.",
+                            Director = "Bob Persichetti, Peter Ramsey, Rodney Rothman",
+                            Price = 19.99m,
+                            Title = "Spider-Man: Uniwersum"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CategoryId = 6,
+                            DateAdded = new DateTime(2017, 10, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Desc = "Chłopiec trafia do Krainy Zmarłych, by poznać historię swojej rodziny.",
+                            Director = "Lee Unkrich",
+                            Price = 15.99m,
+                            Title = "Coco"
+                        });
                 });
 
             modelBuilder.Entity("MgrUKWShop2.Models.Film", b =>

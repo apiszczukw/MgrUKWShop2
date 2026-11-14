@@ -1,4 +1,6 @@
-﻿
+﻿@model IEnumerable<Category>
+
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -76,18 +78,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Wszystkie</a>
                 </li>
+
+                @foreach (var category in Model)
+                {
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Elektronika</a>
+                        <a class="nav-link" href="@Url.Action("CategoryFilms", "Films", new { categoryName = @category.Name })"> @category.Name </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Odzież</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dom i ogród</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sport</a>
-                </li>
+                }
+
             </ul>
         </div>
     </nav>
@@ -97,107 +95,7 @@
 
         @RenderBody()
 
-        <h2 class="mb-4">Nasze produkty</h2>
-
-        <div class="row g-4">
-
-            <!-- Produkt 1 -->
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                <div class="card product-card">
-                    <img src="https://picsum.photos/400/300?random=1"
-                         class="card-img-top" alt="Słuchawki">
-
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Słuchawki bezprzewodowe
-                        </h5>
-
-                        <p class="card-text text-muted">
-                            Wysoka jakość dźwięku i wygoda użytkowania.
-                        </p>
-
-                        <p class="product-price">199,99 zł</p>
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Dodaj do koszyka
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Produkt 2 -->
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                <div class="card product-card">
-                    <img src="https://picsum.photos/400/300?random=2"
-                         class="card-img-top" alt="Bluza">
-
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Bluza bawełniana
-                        </h5>
-
-                        <p class="card-text text-muted">
-                            Wygodna bluza na każdą okazję.
-                        </p>
-
-                        <p class="product-price">129,99 zł</p>
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Dodaj do koszyka
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Produkt 3 -->
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                <div class="card product-card">
-                    <img src="https://picsum.photos/400/300?random=3"
-                         class="card-img-top" alt="Lampa">
-
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Lampa biurkowa LED
-                        </h5>
-
-                        <p class="card-text text-muted">
-                            Nowoczesne oświetlenie do Twojego domu.
-                        </p>
-
-                        <p class="product-price">89,99 zł</p>
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Dodaj do koszyka
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Produkt 4 -->
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                <div class="card product-card">
-                    <img src="https://picsum.photos/400/300?random=4"
-                         class="card-img-top" alt="Plecak">
-
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Plecak turystyczny
-                        </h5>
-
-                        <p class="card-text text-muted">
-                            Idealny na wycieczki i aktywny wypoczynek.
-                        </p>
-
-                        <p class="product-price">159,99 zł</p>
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Dodaj do koszyka
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        
     </main>
 
     <!-- Stopka -->
