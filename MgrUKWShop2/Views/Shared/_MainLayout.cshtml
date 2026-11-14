@@ -1,0 +1,211 @@
+﻿
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyShop – Sklep internetowy</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .category-nav {
+            background-color: white;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+            .category-nav .nav-link {
+                color: #495057;
+                font-weight: 500;
+            }
+
+                .category-nav .nav-link:hover {
+                    color: #0d6efd;
+                }
+
+        .product-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            transition: transform 0.2s;
+        }
+
+            .product-card:hover {
+                transform: translateY(-4px);
+            }
+
+            .product-card img {
+                height: 200px;
+                object-fit: cover;
+            }
+
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #198754;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nagłówek -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyShop</a>
+            <span class="text-white">🛒 Koszyk</span>
+        </div>
+    </nav>
+
+    <!-- Menu kategorii -->
+    <nav class="category-nav">
+        <div class="container">
+            <ul class="nav justify-content-center py-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Wszystkie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Elektronika</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Odzież</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dom i ogród</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sport</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Produkty -->
+    <main class="container py-5">
+
+        @RenderBody()
+
+        <h2 class="mb-4">Nasze produkty</h2>
+
+        <div class="row g-4">
+
+            <!-- Produkt 1 -->
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card product-card">
+                    <img src="https://picsum.photos/400/300?random=1"
+                         class="card-img-top" alt="Słuchawki">
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Słuchawki bezprzewodowe
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Wysoka jakość dźwięku i wygoda użytkowania.
+                        </p>
+
+                        <p class="product-price">199,99 zł</p>
+
+                        <a href="#" class="btn btn-primary w-100">
+                            Dodaj do koszyka
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produkt 2 -->
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card product-card">
+                    <img src="https://picsum.photos/400/300?random=2"
+                         class="card-img-top" alt="Bluza">
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Bluza bawełniana
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Wygodna bluza na każdą okazję.
+                        </p>
+
+                        <p class="product-price">129,99 zł</p>
+
+                        <a href="#" class="btn btn-primary w-100">
+                            Dodaj do koszyka
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produkt 3 -->
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card product-card">
+                    <img src="https://picsum.photos/400/300?random=3"
+                         class="card-img-top" alt="Lampa">
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Lampa biurkowa LED
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Nowoczesne oświetlenie do Twojego domu.
+                        </p>
+
+                        <p class="product-price">89,99 zł</p>
+
+                        <a href="#" class="btn btn-primary w-100">
+                            Dodaj do koszyka
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produkt 4 -->
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card product-card">
+                    <img src="https://picsum.photos/400/300?random=4"
+                         class="card-img-top" alt="Plecak">
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Plecak turystyczny
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Idealny na wycieczki i aktywny wypoczynek.
+                        </p>
+
+                        <p class="product-price">159,99 zł</p>
+
+                        <a href="#" class="btn btn-primary w-100">
+                            Dodaj do koszyka
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Stopka -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">
+            &copy; 2026 MyShop – Wszystkie prawa zastrzeżone
+        </p>
+    </footer>
+
+</body>
+</html>
