@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Category>
+﻿
 
 
 <!DOCTYPE html>
@@ -79,13 +79,10 @@
                     <a class="nav-link" href="#">Wszystkie</a>
                 </li>
 
-                @foreach (var category in Model)
-                {
-                <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("CategoryFilms", "Films", new { categoryName = @category.Name })"> @category.Name </a>
-                </li>
-                }
 
+                @(await Component.InvokeAsync("Menu"))
+
+               
             </ul>
         </div>
     </nav>
