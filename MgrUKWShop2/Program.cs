@@ -8,6 +8,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<FilmsContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("LocalDb")));
 
+builder.Services.AddSession();
+
 
 var app = builder.Build();
 
@@ -26,10 +28,20 @@ app.UseAuthorization();
 
 app.MapStaticAssets();
 
+app.UseSession();
+
+app.MapControllerRoute(
+    name: "categories",
+    pattern: "kategoria/{categoryName}",
+    defaults: new { controller = "Films", action = "CategoryFilms" }
+    );
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+
+
 
 
 app.Run();
